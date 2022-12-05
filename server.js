@@ -9,19 +9,8 @@ const app = new Koa();
 app.use(cors());
 app.use(koaBody({ json: true }));
 
-const messages = [
-  {
-    "id": 1,
-    "userId": "5f2d9da0-f624-4309-a598-8ba35d6c4bb6",
-    "content": "Какая сейчас погода за окном?"
-  },
-  {
-    "id": 2,
-    "userId": "5f2d9da0-f624-4309-a598-8ba35d6c4bb8",
-    "content": "К сожалению, я не знаю ответа на этот вопрос"
-  },
-];
-let nextId = 3;
+const messages = [];
+let nextId = 1;
 
 const router = new Router();
 
